@@ -1,4 +1,4 @@
-# React: Coloring Sun Sample
+# React Samples: Coloring Sun
 
 [![Build Status](https://travis-ci.org/LonelyPrincess/react-coloring-sun-sample.svg?branch=master)](https://travis-ci.org/LonelyPrincess/react-coloring-sun-sample)
 [![Inline docs](http://inch-ci.org/github/LonelyPrincess/react-coloring-sun-sample.svg?branch=master&style=shields)](http://inch-ci.org/github/LonelyPrincess/react-coloring-sun-sample)
