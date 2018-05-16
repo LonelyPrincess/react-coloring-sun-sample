@@ -1,0 +1,24 @@
+{
+  "name": "react-coloring-sun-sample",
+  "description": "A simple React application to dynamically set the color of a sun vector image through a visible selector.",
+  "author": {
+    "name": "Sara Hernández",
+    "email": "sara.her.su@gmail.com",
+    "url": "http://github.com/LonelyPrincess"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "color": "^3.0.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

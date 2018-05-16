@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sky {
+    background: linear-gradient(200deg, #00FFFF -150%, #C0FFFF);
+}
+
+.instructions {
+    color: #999999;
+    margin: 0 10px;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.instructions b {
+    font-weight: normal;
+    color: #777777;
+}
