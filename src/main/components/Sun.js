@@ -5,6 +5,14 @@ import Color from 'color';
 
 import '../../res/styles/Sun.css';
 
+/**
+ * This stateless component is used to render the sun image. The color received
+ * as a prop will change the way the image is shown in the screen.
+ *
+ * @module Components/SunSVG
+ * @author Sara Hernández <sara.her.su@gmail.com>
+ * @param {string} color - Code for the color that will be used to fill the image.
+ */
 function SunSVG ({ color = '#EF9067' }) {
 
   const darkColor = Color(color).darken(0.05);
