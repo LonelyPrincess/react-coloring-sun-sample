@@ -25,3 +25,16 @@
     font-weight: normal;
     color: #777777;
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 5%;
+        box-sizing: border-box;
+    }
+
+    .container .sun {
+        flex-grow: 1;
+        margin: 20%;
+        margin-top: 15%;
+    }
+}
