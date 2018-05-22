@@ -5,6 +5,10 @@
     margin-bottom: 100px;
 }
 
+.sun * {
+    transition: 1s;
+}
+
 .sun .light-beams > * {
     fill: #6be86b;
     animation: shine-move 2s infinite;
