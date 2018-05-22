@@ -6,7 +6,8 @@ import '../../res/styles/ColorSelector.css';
 const colorSet = [ 'gray', 'cadetblue', 'orange', 'limegreen', 'darkkhaki', 'burlywood', 'gold', 'chartreuse' ];
 
 /**
- * This stateless component displays a predefined list of colors.
+ * This component displays a predefined list of colors and allows the user to
+ * choose any of them.
  *
  * Everytime an item on the rendered list is clicked, the selected color will
  * be passed as an argument to the callback function specified in the component
@@ -17,17 +18,30 @@ const colorSet = [ 'gray', 'cadetblue', 'orange', 'limegreen', 'darkkhaki', 'bur
  * @param {function} onColorSelected - Handler function to trigger when a
  *  color item is clicked.
  */
-function ColorSelector ({ onColorSelected }) {
-  return (
-    <ul className="color-selector">
-      {colorSet.map((color, index) => (
-        <li key={index} style={{ backgroundColor: color }}
-          onClick={() => { onColorSelected(color) }}>
-          {color}
-        </li>
-      ))}
-    </ul>
-  );
+class ColorSelector extends React.Component {
+  state = {
+    selectedColor: null
+  };
+
+  render () {
+    const { selectedColor } = this.state;
+    const { onColorSelected } = this.props;
+
+    return (
+      <ul className="color-selector">
+        {colorSet.map((color, index) => (
+          <li key={index} style={{ backgroundColor: color }}
+            className={color === selectedColor ? "active" : undefined}
+            onClick={() => {
+              this.setState({ selectedColor: color });
+              onColorSelected(color);
+            }}>
+            {color}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 }
 
 ColorSelector.propTypes = {
