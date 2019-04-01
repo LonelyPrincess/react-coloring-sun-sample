@@ -18,30 +18,24 @@ const colorSet = [ 'gray', 'cadetblue', 'orange', 'limegreen', 'darkkhaki', 'bur
  * @param {function} onColorSelected - Handler function to trigger when a
  *  color item is clicked.
  */
-class ColorSelector extends React.Component {
-  state = {
-    selectedColor: null
-  };
+function ColorSelector ({ onColorSelected }) {
 
-  render () {
-    const { selectedColor } = this.state;
-    const { onColorSelected } = this.props;
+  const [ selectedColor, setSelectedColor ] = React.useState(null);
 
-    return (
-      <ul className="color-selector">
-        {colorSet.map((color, index) => (
-          <li key={index} style={{ backgroundColor: color }}
-            className={color === selectedColor ? "active" : undefined}
-            onClick={() => {
-              this.setState({ selectedColor: color });
-              onColorSelected(color);
-            }}>
-            {color}
-          </li>
-        ))}
-      </ul>
-    );
-  }
+  return (
+    <ul className="color-selector">
+      {colorSet.map((color, index) => (
+        <li key={index} style={{ backgroundColor: color }}
+          className={color === selectedColor ? "active" : undefined}
+          onClick={() => {
+            setSelectedColor(color);
+            onColorSelected(color);
+          }}>
+          {color}
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 ColorSelector.propTypes = {
