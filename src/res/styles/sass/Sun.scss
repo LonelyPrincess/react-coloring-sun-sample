@@ -1,0 +1,40 @@
+.sun {
+  width: 80%;
+  max-width: 300px;
+  overflow: overlay;
+  margin-bottom: 100px;
+
+  * {
+    transition: 1s;
+  }
+
+  .light-beams > * {
+    fill: #6be86b;
+    animation: shine-move 2s infinite;
+  }
+
+  .cheeks > * {
+    fill: #F27281;
+  }
+
+  .shine {
+    fill: #F7D88B;
+    transform-origin: 50% 50%;
+    animation: spin 15s linear infinite;
+  }
+
+  .eyes > *, .mouth {
+    fill: #464D59;
+  }
+}
+
+@keyframes shine-move {
+  0%    { transform: translate(0px, 0px); }
+  50%   { transform: translate(-10px, 5px); }
+  100%  { transform: translate(0px, 0px); }
+}
+
+@keyframes spin {
+    from    { transform: rotate(0deg); }
+    to      { transform: rotate(360deg); }
+}
