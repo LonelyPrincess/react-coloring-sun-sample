@@ -13,7 +13,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^1.1.1"
+    "react-scripts": "^2.1.8"
   },
   "devDependencies": {
     "enzyme": "^3.9.0",
@@ -28,5 +28,11 @@
     "eject": "react-scripts eject",
     "deploy": "npm run build && gh-pages -d build"
   },
-  "homepage": "https://lonelyprincess.github.io/react-coloring-sun-sample"
+  "homepage": "https://lonelyprincess.github.io/react-coloring-sun-sample",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
