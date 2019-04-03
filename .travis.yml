@@ -8,3 +8,12 @@ notifications:
   email:
     on_success: never
     on_failure: change
+
+# SonarQube Settings
+addons:
+  sonarcloud:
+    organization: "lonelyprincess-github"
+
+# Scripts to run before analysis
+script:
+  - sonar-scanner
